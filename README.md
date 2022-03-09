@@ -88,3 +88,61 @@ tmp_dir = "tmp"
   clean_on_exit = false
 ```
 
+## 集成gin
+
+导入gin
+```bash
+go get github.com/gin-gonic/gin
+```
+
+编写`main.go`
+
+```go
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+	"net/http"
+)
+
+func main() {
+	// 初始化gin实例
+	r := gin.Default()
+
+	// 注册一个路由
+	r.GET("/", func(c *gin.Context) {
+		// 以JSON 格式响应
+		c.JSON(http.StatusOK, gin.H{
+			"hello": "world",
+		})
+	})
+
+	// 运行服务
+	r.Run()
+}
+
+```
+
+`air`自动重载，并监听`8080`端口
+
+可以访问地址：[http://localhost:8080](http://localhost:8080)
+
+修改一下`main.go`
+
+```go
+// new 一个 Gin Engine 实例
+r := gin.New()
+
+// 注册中间件
+r.Use(gin.Logger(), gin.Recovery())
+```
+上面两句等于我们初始化的
+```go
+r := gin.Default()
+```
+
+```go
+r.Run(":8000")
+```
+可以重新监听新的端口
+
