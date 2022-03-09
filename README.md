@@ -146,3 +146,9 @@ r.Run(":8000")
 ```
 可以重新监听新的端口
 
+使用`go mod tidy`
+处理一些不要的warning
+
+## 初始化路由
+新建两个目录：`boostrap`和`routes`
+`bootstrap`目录存放程序初始化的代码；`routes`存放我们所有的路由文件
