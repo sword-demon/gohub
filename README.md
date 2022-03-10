@@ -152,3 +152,10 @@ r.Run(":8000")
 ## 初始化路由
 新建两个目录：`boostrap`和`routes`
 `bootstrap`目录存放程序初始化的代码；`routes`存放我们所有的路由文件
+
+## 配置方案
+```bash
+go get github.com/spf13/cast
+
+go get github.com/spf13/viper
+```
