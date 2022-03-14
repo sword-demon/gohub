@@ -3,7 +3,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
+	"gohub/app/http/controllers/api/auth"
 )
 
 func RegisterAPIRoutes(r *gin.Engine) {
@@ -12,9 +12,12 @@ func RegisterAPIRoutes(r *gin.Engine) {
 	{
 		// 注册一个路由
 		v1.GET("/", func(c *gin.Context) {
-			c.JSON(http.StatusOK, gin.H{
-				"Hello": "World",
-			})
+			authGroup := v1.Group("/auth")
+			{
+				suc := new(auth.SignupController)
+				// 判断手机是否已注册
+				authGroup.POST("/signup/phone/exist", suc.IsPhoneExist)
+			}
 		})
 	}
 }
