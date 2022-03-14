@@ -159,3 +159,14 @@ go get github.com/spf13/cast
 
 go get github.com/spf13/viper
 ```
+
+## 集成GORM
+```bash
+go get gorm.io/gorm
+```
+
+引入驱动
+```bash
+go get gorm.io/driver/mysql
+go get gorm.io/driver/sqlite
+```
