@@ -1,7 +1,6 @@
 // Package middlewares 存放系统中间件
 package middlewares
 
-import "C"
 import (
 	"bytes"
 	"github.com/gin-gonic/gin"
