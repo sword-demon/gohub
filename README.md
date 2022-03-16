@@ -170,3 +170,10 @@ go get gorm.io/gorm
 go get gorm.io/driver/mysql
 go get gorm.io/driver/sqlite
 ```
+
+## 安装zap(日志库)
+```bash
+go get go.uber.org/zap
+go get gopkg.in/natefinch/lumberjack.v2
+```
+lumberjack 是一套滚动日志的实现方案，帮助我们管理日志文件。
