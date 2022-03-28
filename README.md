@@ -182,3 +182,8 @@ lumberjack 是一套滚动日志的实现方案，帮助我们管理日志文件
 ```bash
 go get github.com/go-redis/redis/v8
 ```
+
+## 安装base64Captcha库
+```bash
+go get github.com/mojocn/base64Captcha
+```
