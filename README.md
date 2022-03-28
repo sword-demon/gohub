@@ -177,3 +177,8 @@ go get go.uber.org/zap
 go get gopkg.in/natefinch/lumberjack.v2
 ```
 lumberjack 是一套滚动日志的实现方案，帮助我们管理日志文件。
+
+## 安装go-redis/redis 库
+```bash
+go get github.com/go-redis/redis/v8
+```
